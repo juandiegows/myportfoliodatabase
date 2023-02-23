@@ -7,7 +7,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema DBJuanDiegoWS
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `DBJuanDiegoWS` ;
 
 -- -----------------------------------------------------
 -- Schema DBJuanDiegoWS
@@ -421,6 +420,29 @@ CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`ProjectToProject` (
   CONSTRAINT `Project_second`
     FOREIGN KEY (`ProjectId`)
     REFERENCES `DBJuanDiegoWS`.`Project` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `DBJuanDiegoWS`.`ImageProject`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `DBJuanDiegoWS`.`ImageProject` ;
+
+CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`ImageProject` (
+  `ProjectId` INT NOT NULL,
+  `ImageId` INT NOT NULL,
+  PRIMARY KEY (`ProjectId`, `ImageId`),
+  INDEX `image_project_idx` (`ImageId` ASC) VISIBLE,
+  CONSTRAINT `project_image`
+    FOREIGN KEY (`ProjectId`)
+    REFERENCES `DBJuanDiegoWS`.`Project` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `image_project`
+    FOREIGN KEY (`ImageId`)
+    REFERENCES `DBJuanDiegoWS`.`Image` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
