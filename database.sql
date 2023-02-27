@@ -17,8 +17,6 @@ USE `DBJuanDiegoWS` ;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`User`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`User` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`User` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(100) NOT NULL,
@@ -34,8 +32,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`Service`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`Service` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`Service` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `UserId` INT NULL,
@@ -60,8 +56,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`Client`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`Client` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`Client` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(200) NULL,
@@ -76,8 +70,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`Image`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`Image` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`Image` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(400) NULL,
@@ -89,8 +81,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`Participant`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`Participant` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`Participant` (
   `UserId` INT NOT NULL,
   `ClientId` INT NOT NULL,
@@ -112,8 +102,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`TopicType`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`TopicType` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`TopicType` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(400) NOT NULL,
@@ -126,8 +114,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`Topic`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`Topic` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`Topic` (
   `Id` INT NOT NULL,
   `TopicTypeId` INT NOT NULL,
@@ -150,8 +136,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`ImageClient`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`ImageClient` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`ImageClient` (
   `ImageId` INT NOT NULL,
   `ClientId` INT NOT NULL,
@@ -173,8 +157,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`ClientTopic`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`ClientTopic` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`ClientTopic` (
   `ClientId` INT NOT NULL,
   `TopicId` INT NOT NULL,
@@ -198,8 +180,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`WorkExperience`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`WorkExperience` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`WorkExperience` (
   `Id` INT NOT NULL,
   `UserId` INT NOT NULL,
@@ -223,8 +203,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`WorkExperienceTopic`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`WorkExperienceTopic` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`WorkExperienceTopic` (
   `WorkExperienceId` INT NOT NULL,
   `TopicId` INT NOT NULL,
@@ -246,8 +224,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`Level`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`Level` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`Level` (
   `Id` INT NOT NULL,
   `Name` VARCHAR(45) NOT NULL,
@@ -261,8 +237,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`Skill`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`Skill` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`Skill` (
   `UserId` INT NOT NULL,
   `TopicId` INT NOT NULL,
@@ -291,8 +265,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`Education`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`Education` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`Education` (
   `Id` INT NOT NULL,
   `UserId` INT NULL,
@@ -316,8 +288,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`Project`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`Project` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`Project` (
   `Id` INT NOT NULL,
   `UserId` INT NOT NULL,
@@ -343,8 +313,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`ProjectTopic`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`ProjectTopic` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`ProjectTopic` (
   `TopicId` INT NOT NULL,
   `ProjectId` INT NOT NULL,
@@ -366,8 +334,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`SocialMedia`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`SocialMedia` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`SocialMedia` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(100) NULL,
@@ -379,8 +345,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`SocialMediaUser`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`SocialMediaUser` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`SocialMediaUser` (
   `UserId` INT NOT NULL,
   `SocialMediaId` INT NOT NULL,
@@ -405,8 +369,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`ProjectToProject`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`ProjectToProject` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`ProjectToProject` (
   `PrincipalProojecId` INT NOT NULL,
   `ProjectId` INT NOT NULL,
@@ -428,8 +390,6 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `DBJuanDiegoWS`.`ImageProject`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `DBJuanDiegoWS`.`ImageProject` ;
-
 CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`ImageProject` (
   `ProjectId` INT NOT NULL,
   `ImageId` INT NOT NULL,
@@ -448,6 +408,48 @@ CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`ImageProject` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `DBJuanDiegoWS`.`profession`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`profession` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(200) NOT NULL,
+  `NameSpanish` VARCHAR(200) NOT NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `DBJuanDiegoWS`.`ProfessionUser`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `DBJuanDiegoWS`.`ProfessionUser` (
+  `ProfessionId` INT NOT NULL,
+  `UserId` INT NOT NULL,
+  PRIMARY KEY (`ProfessionId`, `UserId`),
+  INDEX `userProfession_idx` (`UserId` ASC) VISIBLE,
+  CONSTRAINT `professionUser`
+    FOREIGN KEY (`ProfessionId`)
+    REFERENCES `DBJuanDiegoWS`.`profession` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `userProfession`
+    FOREIGN KEY (`UserId`)
+    REFERENCES `DBJuanDiegoWS`.`User` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- -----------------------------------------------------
+-- Data for table `DBJuanDiegoWS`.`User`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `DBJuanDiegoWS`;
+INSERT INTO `DBJuanDiegoWS`.`User` (`Id`, `Name`, `LastName`, `UserName`, `Password`, `Active`) VALUES (1, 'Juan Diego', 'Mejia Maestre', NULL, NULL, 1);
+
+COMMIT;
+
